@@ -1,3 +1,26 @@
+---
+Titulo: "Proyecto Gatsby"
+---
+
+# Todo-do List
+
+- [ ] LayoutSlots
+- [ ] MyPageWithClose
+- [ ] MyPageWithPagination 
+- [ ] MyKeyBoardNum 
+- [ ] MyPaginationNum 
+- [ ] MyInputemail
+- [ ] MyInputTime
+- [ ] MySlide
+- [ ] MySlidePerpestive
+- [x] MySlidePanel
+- [x] MyMenuHorizontal
+- [x] MyMenuVerticalPanel
+- [ ] MyDialog
+- [ ] MyLoading01
+- [ ] MyLoading02
+
+  
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
