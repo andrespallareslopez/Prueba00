@@ -25,6 +25,8 @@ var controls;
         
        }
     })();
+
+    
     ns.UXDataList.prototype=new components.container();
     
    

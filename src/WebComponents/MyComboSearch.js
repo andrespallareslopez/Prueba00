@@ -41,6 +41,66 @@ export const MyComboSearch = (props) => {
 
     var scroll;
     var datalist;
+    
+    useEffect(()=>{
+        datalist=new UXSearchList({
+            id:id,
+            clearContainer:true,
+            data:props,
+            
+           textTemplate: cadenadatalist,
+            onButtonClick:function(options){
+                //console.log('estoy en onbuttonclick search01')
+                
+                datalist.renderTemplate(props)
+                  
+                scroll=new UXButtonScroll({
+                    id:id+'datalist',
+                    onItemClick:function(value,target){
+                        console.dir(target)
+                        //console.log("estoy dentro de onItemClick")
+                        datalist.$inputText.val(value);
+                        datalist.toggle();
+                        scroll.destroy();
+                    }
+                  }) 
+             
+            },
+            onSearch:(datos,value,id)=>{
+            
+                var datoscombo=Enumerable.from(props.data)
+                .where(
+                    (data)=>{
+                        return data.description.includes(value)==true
+                     })
+                 .select("$").toArray();
+                 console.dir(datoscombo);
+                 return datoscombo;
+              
+            },
+            onClose:function(){
+              if (scroll)
+                scroll.destroy();
+            }
+        })
+
+        return ()=>{
+            console.log("borrado de componente")
+            datalist.toggle();
+            datalist.destroy();
+            if  (scroll!==undefined){
+ 
+              console.log("estoy destruyendo")
+            
+              scroll.destroy();
+ 
+            }
+             
+               
+        }
+
+    },[])
+    /*
     let timer = setTimeout(() => {
         datalist=new UXSearchList({
             id:id,
@@ -84,7 +144,7 @@ export const MyComboSearch = (props) => {
         })
         clearTimeout(timer);
     }, 450); 
-  
+    */
 
     return (
       <div id={props.id} >          

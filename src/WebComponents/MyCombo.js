@@ -72,7 +72,7 @@ export const MyCombo = (props) => {
            console.log("borrado de componente")
            datalist.toggle();
            datalist.destroy();
-           if  (scroll!==undefined){
+           if  (scroll !== undefined){
 
              console.log("estoy destruyendo")
            

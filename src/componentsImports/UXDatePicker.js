@@ -1,6 +1,9 @@
 import jQuery from '../../src/componentsImports/import-jquery.js'
 import {util} from '../../src/componentsImports/util01.js';
 
+import { appendToContainer,recreateNode,removeContainer } from "../../src/componentsImports/utilContainer.js";
+
+
 import Pikaday from 'pikaday'
 import Tether from "tether"
 
@@ -15,6 +18,7 @@ var controls;
               options.namefield=options.namefield||'#fecha'
               options.namepicker=options.namepicker||'calendar'
               options.namebutton=options.namebutton||'#btn-fecha'
+              options.nameblock=options.nameblock||'.group-block'
               
           })(options); 
           this.options={};
@@ -74,11 +78,42 @@ var controls;
                 
             }
         }); 
+        $("#"+id+" "+self.options.nameblock).on("click",function(e){
+            console.log("estoy dentro"+"#"+id+" "+self.options.nameblock)
+            //console.dir(e)
+            e.preventDefault()
+            if ($(getnamedatalist.apply(self,[])).hasClass("tether-open") && ((e.target.className !== 'fa fa-sort-desc' && e.target.className !== 'fa fa-search' && e.target.className !== 'fa fa-calendar' ) && e.target.id !== self.options.namebutton.replace('#',''))){
+               //cerramos el panel del combo si pinchamos en cualquier lugar del control
+               $(getnamedatalist.apply(self,[])).toggleClass("tether-open");
+               if (picker.isVisible()) {
+                //picker.show();
+                picker.hide();
+                //picker._o.bound=true;
+            } else {
+                picker.show();
+                tepicker.position();
+                tepicker.position();
+               
+                
+            }
+
+               //tepicker.position();
+               //tepicker.position();
+
+               if (self.options.onClose){
+                self.options.onClose()
+               }
+            }
+        })
+
+
+
+
         var tepicker = new Tether({
             element: "#"+nameCalendar,
             target: "#"+id+" "+self.options.namebutton,
-            attachment: "bottom right",
-            targetAttachment: 'top right',
+            attachment: "top right",
+            targetAttachment: 'bottom left',
             constraints: [
                 {
                     to: 'scrollParent',
@@ -86,9 +121,27 @@ var controls;
                 }]
         });
         tepicker.position()
+        self.$tepicker= tepicker;
         picker.hide()
     };
-    
+    ns.UXDatePicker.prototype.toggle=function(){
+        var self=this
+        
+        $(getnamedatalist.apply(self,[])).toggleClass("tether-open");
+        self.$tepicker.position();
+        
+    };
+    ns.UXDatePicker.prototype.destroy=function(){
+        var self=this;
+       //ReactDOM.unmountComponentAtNode($(getnamedatalist.apply(self,[]))[0]);
+       removeContainer(getnamedatalist.apply(self,[]))
+    }
+
+    var getnamedatalist = function(){
+        var self = this
+        var id=self.options.id;
+        return "#"+id + self.options.namepicker;
+     }
 
 })(controls=controls||{},jQuery)
 

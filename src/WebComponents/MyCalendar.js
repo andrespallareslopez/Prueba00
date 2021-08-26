@@ -8,10 +8,15 @@ import '../../node_modules/tether/dist/css/tether.css'
 export const MyCalendar = (props) => {
     let id=props.id
     useEffect(()=>{
-      new UXDatePicker({
+      
+      var calendario = new UXDatePicker({
         id:id
       })
-    })
+      return ()=>{
+        calendario.toggle();
+        calendario.destroy();
+      }
+    },[])
     /*
     let timer1 = setTimeout(() => { 
      
