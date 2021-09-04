@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter as Router,Switch, Route } from "react-router-dom"
 
 import '../../node_modules/components-font-awesome/css/font-awesome.min.css'
 
@@ -12,10 +13,10 @@ import {datos,mesas,categorias,articulos} from '../../src/ListInMemory.js'
 
 export default function Home() {
   return (
-     
+   
      <Layout>
          <MySlidePanel datalist={categorias} id="panelCategorias"></MySlidePanel>
      </Layout>
-     
+    
   )
 }

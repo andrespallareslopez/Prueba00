@@ -12,7 +12,16 @@ import {MyPage02} from '../../src/WebComponents/MyPage02.js'
 import {MyPage03} from '../../src/WebComponents/MyPage03.js'
 import {MyPageSearch} from '../../src/WebComponents/MyPageSearch.js'
 import {MyPageTable} from '../../src/WebComponents/MyPageTable.js'
+
+import {MyPagePaginacion} from '../../src/WebComponents/MyPagePaginacion.js'
+
 import {MyPageForm} from '../../src/WebComponents/MyPageForm.js'
+
+import {MyTab} from '../../src/WebComponents/MyTab.js'
+
+
+
+
 
 import '../../src/components/menu-vertical/03Menu-vertical01/03Menu-vertical01.css';
 import '../../src/components/list/03List-collections.css';
@@ -64,10 +73,14 @@ export const MyMenuVertical = (props) => {
                )
             break;
             case 'template07':
-               
+               template =  (props) => (
+                 <MyTab id={props.id} ></MyTab>
+               )
             break;
             case 'template08':
-               
+              template =  (props) => (
+                <MyPagePaginacion id={props.id} ></MyPagePaginacion>
+              )
             break;
             case 'template09':
                

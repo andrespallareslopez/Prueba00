@@ -7,7 +7,7 @@ export const MyListGrpButtons = (props)=>{
     return (
         <div className="list-grp-buttons space-top-1x">
         {
-           props.data.map(function(value,i){
+          props.data && props.data.map(function(value,i){
               return (
                    <a className="list-grp-button box-shadow-3" href="#" key={i} >
                      <div className="list-grp-content-top" >

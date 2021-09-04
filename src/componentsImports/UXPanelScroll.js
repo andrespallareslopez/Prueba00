@@ -50,7 +50,6 @@ var controls
         })
     }
   
-    
 })(controls=controls||{},UXScroll,jQuery)
      
 var UXPanelScroll=controls.UXPanelScroll;

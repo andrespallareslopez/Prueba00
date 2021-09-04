@@ -2,15 +2,16 @@ import React from 'react'
 
 import '../../src/components/list/03List-collections.css'
 
-const MyListCollection = (props) => {
+export const MyListCollection = (props) => {
      
      return (
-        <ul className="list-collection "  >
-          props.data.map(function(value,i){
-            <li key={i}>
+        <ul className="list-collection"  >
+        {
+           props.data && props.data.map(function(value,i){
+            return (
+              <li key={i}>
 
-            <div className="el-left" >
-            </div>
+                <div className="el-left" ></div>
                 <div className="el-content" >
     
                   <h2>{value.description}</h2>
@@ -18,12 +19,18 @@ const MyListCollection = (props) => {
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem facilis nisi soluta dicta, asperiores, fugiat enim ab adipisci doloribus quaerat at saepe suscipit labore. Sit ipsa esse illo reprehenderit?</p>
                            
                 </div>
-                <a className="list-element el-right ripple" href="#" >
-                    <span className="fa fa-chevron-right center" ></span>
+                <a className="list-element el-right ripple" href={"#/" + i} data-panel-id = {i}>
+                    <span className="fa fa-chevron-right center"  href = {i}  ></span>
                 </a>
-            </li>
-          }
+              </li>
+            )
+            }
+          )
+        }
+       
+          
         </ul>
+        
      )
 } 
-export default MyListCollection;
+

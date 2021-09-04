@@ -1,6 +1,11 @@
 import React,{useEffect} from 'react'
 import {MyPanelScrollPopUp} from '../../src/WebComponents/MyPanelScrollPopUp.js'
 import {MyPanelScrollSearch} from '../../src/WebComponents/MyPanelScrollSearch.js'
+
+import {MyPanelScrollContent} from '../../src/WebComponents/MyPanelScrollContent.js'
+
+import {MyPanelScrollForm} from '../../src/WebComponents/MyPanelScrollForm.js'
+
 import {MyForm} from '../../src/WebComponents/MyForm.js'
 
 export const MyPageForm = (props) => {
@@ -19,9 +24,9 @@ export const MyPageForm = (props) => {
         <div className="main" >
         <main>
             <div className="box content"  >
-            <MyPanelScrollSearch id="panelsearch01" >
+            <MyPanelScrollForm id="panelform01" >
               <MyForm id="form02" />
-            </MyPanelScrollSearch>     
+            </MyPanelScrollForm>     
             </div>
         </main>
         </div>
