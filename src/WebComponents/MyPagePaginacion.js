@@ -1,19 +1,31 @@
 
 import React,{useEffect,useState} from 'react'
+
+import $ from './import-jquery.js'
+
 import Enumerable from 'linq'
 import {datos,mesas,categorias,articulos} from '../../src/ListInMemory.js'
 
 import {MyNumPaginacion} from './MyNumPaginacion'
 
 import {UXPaginacionControl} from '../../src/componentsImports/UXPaginacionControl.js'
+import {UXLink} from '../../src/componentsImports/UXLink.js'
+import {UXLoadLink} from '../../src/componentsImports/UXLoadLink.js'
 
 import {MyListCollection} from './MyListCollection'
 import {MyListGrpButtons} from './MyListGrpButtons'
 
+
+import {MyPage01} from '../../src/WebComponents/MyPage01.js'
+import {MyPage02} from '../../src/WebComponents/MyPage02.js'
+import {MyPage03} from '../../src/WebComponents/MyPage03.js'
+import {MyPageSearch} from '../../src/WebComponents/MyPageSearch.js'
+import {MyPageTable} from '../../src/WebComponents/MyPageTable.js'
+
 export const MyPagePaginacion= (props) => {
     const [index,setIndex] = useState(1);
     
-    //var pageindex=1;
+    
     var pagerow=5;
     var datos={
         grupos:[{codgrupo:1,description:"Bebida"},
@@ -56,6 +68,7 @@ export const MyPagePaginacion= (props) => {
     
     
     
+    
     useEffect(()=>{
     
     const idTemplate='#' + props.id
@@ -70,10 +83,30 @@ export const MyPagePaginacion= (props) => {
         
     })
     
+    const navegacion = new UXLink({
+        id:idTemplate,
+        onClickMenu:function(e){
+            e.preventDefault()
+            console.dir(e.target)
+            var id=$(e.target).data("panel-id")
+            console.log(id)
+            let template;
+            var idDetail = "paneldetail" + id
+
+            template=(props)=> (
+                 <MyPage01 id={props.id}></MyPage01>
+            )
+            
+            const loadPanel = new UXLoadLink({
+                id:idDetail,
+                containerView:".main-body .childLayout1",
+                textTemplate: template
+            }) 
+        },
+    })
     },[])
     
-    
-   return (
+    return (
     <div id={props.id} className="wrapper page child" >
         <div className="nav" >
             <nav  >

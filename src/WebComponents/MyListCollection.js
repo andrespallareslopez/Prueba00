@@ -19,8 +19,8 @@ export const MyListCollection = (props) => {
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem facilis nisi soluta dicta, asperiores, fugiat enim ab adipisci doloribus quaerat at saepe suscipit labore. Sit ipsa esse illo reprehenderit?</p>
                            
                 </div>
-                <a className="list-element el-right ripple" href={"#/" + i} data-panel-id = {i}>
-                    <span className="fa fa-chevron-right center"  href = {i}  ></span>
+                <a className="list-element el-right ripple" href={"#/" + i} >
+                    <span className="fa fa-chevron-right center" data-panel-id = {i}  href = {i}  ></span>
                 </a>
               </li>
             )

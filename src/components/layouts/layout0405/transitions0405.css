@@ -1,11 +1,13 @@
 .wrapper.root.open-aside {
   padding-left: 7px;
-  margin-left: 200px; }
+  margin-left: 200px;
+}
 
 .page {
   position: absolute;
   top: 0px;
-  left: 0px; }
+  left: 0px;
+}
 
 .child {
   transform: translateX(100%);
@@ -15,10 +17,12 @@
   overflow-y: auto;
   opacity: 0;
   z-index: 25;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+}
 
 .child.animacion {
   opacity: 1;
-  transform: translateX(0%); }
+  transform: translateX(0%);
+}
 
 /*# sourceMappingURL=transitions0405.css.map */

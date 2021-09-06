@@ -19,9 +19,8 @@ import {MyPageForm} from '../../src/WebComponents/MyPageForm.js'
 
 import {MyTab} from '../../src/WebComponents/MyTab.js'
 
-
-
-
+import MyLogin01 from '../../src/WebComponents/MyLogin01'
+import MyLogin02 from '../../src/WebComponents/MyLogin02'
 
 import '../../src/components/menu-vertical/03Menu-vertical01/03Menu-vertical01.css';
 import '../../src/components/list/03List-collections.css';
@@ -43,6 +42,7 @@ export const MyMenuVertical = (props) => {
           var template;
           switch(id){
             case 'template01':
+              console.dir(props)
                template=(props)=> (
                  <MyPage01 id={props.id}></MyPage01>
                )
@@ -83,10 +83,14 @@ export const MyMenuVertical = (props) => {
               )
             break;
             case 'template09':
-               
+              template =  (props) => (
+                <MyLogin01 id={props.id} ></MyLogin01>
+              )
             break;
             case 'template10':
-               
+              template =  (props) => (
+                <MyLogin02 id={props.id} ></MyLogin02>
+              )
             break;
             case 'template11':
                
@@ -125,8 +129,9 @@ export const MyMenuVertical = (props) => {
                            <a className="element-link el ripple" href="#/plantilla6" data-panel-id="template06" >SubLink 1</a>
                            <a className="element-link el ripple" href="#/plantilla7" data-panel-id="template07" >SubLink 2</a>
                            <a className="element-link el ripple" href="#/plantilla8" data-panel-id="template08" >SubLink 3</a>
-                           <a className="element-link el ripple" href="#/plantilla9" data-panel-id="template09" >SubLink 4</a>
-                           <a className="element-link el ripple" href="#/plantilla10" data-panel-id="template10" >SubLink 5</a>
+                           <a className="element-link el ripple" href="#/plantilla9" data-panel-id="template09" >Prueba Login 01</a>
+                           <a className="element-link el ripple" href="#/plantilla10" data-panel-id="template10" >Prueba Login 02</a>
+                           <a className="element-link el ripple" href="#/plantilla11" data-panel-id="template11" >Prueba Login 03</a>
                          </div>
                     </li>
                     <li className="element item itm" ><a className="element-link el ripple" href="#/plantilla11">Link 3

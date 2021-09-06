@@ -1,8 +1,9 @@
 .group-fix {
   font-weight: 500;
   font-size: 1.05em;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-size: 150%; }
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 150%;
+}
 
 .input-fix {
   position: relative;
@@ -11,7 +12,8 @@
   margin: 1em;
   max-width: 100%;
   width: calc(100% - 2em);
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .input__field-fix {
   position: relative;
@@ -26,10 +28,12 @@
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-appearance: none;
-  /* for box shadows to show on iOS */ }
+  /* for box shadows to show on iOS */
+}
 
 .input__field-fix:focus {
-  outline: none; }
+  outline: none;
+}
 
 .input__label-fix {
   display: inline-block;
@@ -46,22 +50,26 @@
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
 .input__label-content-fix {
   position: relative;
   display: block;
   padding: 0.1em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .graphic-fix {
   position: absolute;
   top: 0;
   left: 0;
-  fill: none; }
+  fill: none;
+}
 
 .icon-fix {
   color: #ddd;
-  font-size: 150%; }
+  font-size: 150%;
+}
 
 /*# sourceMappingURL=03form-inputs-fix.css.map */

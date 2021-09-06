@@ -2,7 +2,8 @@
   /*top:0;*/
   visibility: visible;
   /*opacity: 1;*/
-  /*transition:all 0.2s ease-in-out;*/ }
+  /*transition:all 0.2s ease-in-out;*/
+}
 .lyt03layout01 .child, .lyt03layout01 .child-2 {
   display: table;
   /*top:0;*/
@@ -14,16 +15,19 @@
   overflow-y: auto;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-  z-index: 50; }
+  z-index: 50;
+}
 .lyt03layout01 .child.animacion {
   opacity: 1;
-  transform: translateX(0%); }
+  transform: translateX(0%);
+}
 .lyt03layout01 .child.animacion.right, .lyt03layout01 .child-2.animacion.right {
   /*z-index:999;*/
   /*width:100%;*/
   opacity: 1;
   /*left:0%; */
   /* aqui es donde deberia ir el translate */
-  transform: translateX(0%); }
+  transform: translateX(0%);
+}
 
 /*# sourceMappingURL=03transition01.css.map */

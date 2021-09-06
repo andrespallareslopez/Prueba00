@@ -5,7 +5,8 @@
   margin: 1em;
   max-width: 960px;
   width: calc(100% - 2em);
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .input__field {
   position: relative;
@@ -20,10 +21,12 @@
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-appearance: none;
-  /* for box shadows to show on iOS */ }
+  /* for box shadows to show on iOS */
+}
 
 .input__field:focus {
-  outline: none; }
+  outline: none;
+}
 
 .input__label {
   display: inline-block;
@@ -40,22 +43,26 @@
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
 .input__label-content {
   position: relative;
   display: block;
   padding: 1.6em 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .graphic {
   position: absolute;
   top: 0;
   left: 0;
-  fill: none; }
+  fill: none;
+}
 
 .icon {
   color: #ddd;
-  font-size: 150%; }
+  font-size: 150%;
+}
 
 /*# sourceMappingURL=03form-inputs.css.map */

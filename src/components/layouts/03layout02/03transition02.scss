@@ -1,4 +1,4 @@
-@import "../../../src/shared/scss/variables";
+@import "../../../../src/shared/scss/variables";
 
 .lyt03layout02{
 
@@ -38,7 +38,7 @@
     }
 }
 
-.childLayout.animation{
+.childLayout.animation,.childLayout1.animation,.childLayout2.animation{
     opacity:1;
     transform:translateX(0%);
     @media (min-width:768px){

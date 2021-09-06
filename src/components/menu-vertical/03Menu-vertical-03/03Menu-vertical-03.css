@@ -8,7 +8,8 @@ ul.menu-vertical-03 {
   margin-left: -200px;
   transition: margin-left 0.3s ease-in-out;
   top: 0;
-  height: 100%; }
+  height: 100%;
+}
 
 ul.menu-vertical-03 li {
   background: #9575cd;
@@ -19,8 +20,9 @@ ul.menu-vertical-03 li {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #9575cd 0%, #7e57c2 24%, #673ab7 88%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9575cd', endColorstr='#673ab7',GradientType=0 );
-  /* IE6-9 */ }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#9575cd", endColorstr="#673ab7",GradientType=0 );
+  /* IE6-9 */
+}
 
 ul.menu-vertical-03 li a {
   font-family: Helvetica, Arial, sans-serif;
@@ -32,7 +34,8 @@ ul.menu-vertical-03 li a {
   display: block;
   width: 100%;
   text-decoration: none;
-  color: #EDE7F6; }
+  color: #EDE7F6;
+}
 
 ul.menu-vertical-03 li ul {
   overflow: hidden;
@@ -44,18 +47,22 @@ ul.menu-vertical-03 li ul {
   top: 0px;
   transform: translate3D(-150%, 0, 0);
   height: calc(100%);
-  transition: transform 0.3s ease-in-out,height 0.3s ease-in-out; }
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+}
 
 .section-open ul.menu-vertical-03 {
   height: 100%;
   margin-left: 0px;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+}
 
 .section-open.step3 ul.menu-vertical-03 {
-  margin-left: -200px; }
+  margin-left: -200px;
+}
 
 ul.menu-vertical-03 li > a.expand + ul.sub-menu {
   transform: translate3D(0%, 0, 0);
-  height: calc(100%); }
+  height: calc(100%);
+}
 
 /*# sourceMappingURL=03Menu-vertical-03.css.map */

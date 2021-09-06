@@ -481,6 +481,7 @@ var Container
            if (data ){
             self.options.ReactDOM.render(templateReact(data,self.options.nameDescription),elementSelector)
            }else{
+             console.dir(elementSelector)
              self.options.ReactDOM.render(self.options.templateReact,elementSelector)
            }
         }

@@ -1,9 +1,9 @@
 
 //************************************
 
-@import "../../../src/shared/scss/variables";
+@import "../../../../src/shared/scss/variables";
 
-@import "../../../src/shared/scss/reset";
+@import "../../../../src/shared/scss/reset";
 
 
 //****************************************
@@ -43,7 +43,7 @@ input:focus{
             background: $c50;
            // min-height:100vh;
         }
-         .childLayout{
+         .childLayout,.childLayout1,.childLayout2{
             display:block;
             position:absolute;
             width:100%;

@@ -9,6 +9,7 @@
     "develop": "env-cmd -f .env.development gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
+    "sass-watch": "sass -w src/components",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
@@ -37,7 +38,8 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "sass": "^1.39.0"
   },
   "repository": {
     "type": "git",
