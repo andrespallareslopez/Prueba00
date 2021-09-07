@@ -99,7 +99,7 @@ export const MyPagePaginacion= (props) => {
             
             const loadPanel = new UXLoadLink({
                 id:idDetail,
-                containerView:".main-body .childLayout1",
+                containerView:".main-body .childLyt",
                 textTemplate: template
             }) 
         },

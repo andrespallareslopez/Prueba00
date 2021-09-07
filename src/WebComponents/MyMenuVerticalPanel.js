@@ -4,14 +4,27 @@ import {Link} from 'gatsby'
 import $ from './import-jquery.js'
 
 import {UXMenuPanel} from '../../src/componentsImports/UXMenuPanel.js'
+
+
+import {UXScrollV} from '../../src/componentsImports/UXScrollV.js'
 import {UXLoadPanel} from '../../src/componentsImports/UXLoadPanel.js'
 
+import {MyPage01} from '../../src/WebComponents/MyPage01.js'
+import {MyPage02} from '../../src/WebComponents/MyPage02.js'
+import {MyPage03} from '../../src/WebComponents/MyPage03.js'
+import {MyPageSearch} from '../../src/WebComponents/MyPageSearch.js'
+import {MyPageTable} from '../../src/WebComponents/MyPageTable.js'
 
+import {MyPagePaginacion} from '../../src/WebComponents/MyPagePaginacion.js'
 
+import {MyPageForm} from '../../src/WebComponents/MyPageForm.js'
 
+import {MyTab} from '../../src/WebComponents/MyTab.js'
+
+import MyLogin01 from '../../src/WebComponents/MyLogin01'
+import MyLogin02 from '../../src/WebComponents/MyLogin02'
 
 import '../../src/components/menu-vertical/03Menu-vertical-04/03Menu-vertical-04.css';
-
 
 export const MyMenuVerticalPanel = (props) => {
     
@@ -28,7 +41,9 @@ export const MyMenuVerticalPanel = (props) => {
                var template;
                 switch(id){
                     case 'template01':
-                   
+                        template=(props)=> (
+                            <MyPage01 id={props.id}></MyPage01>
+                          )
                     break;
                     case 'template02':
                   
@@ -43,22 +58,26 @@ export const MyMenuVerticalPanel = (props) => {
                   
                     break;
                     case 'template06':
-                    template = '<my-page-collection-01 id="template06"></my-page-collection-01>'
+                  
                     break;
                     case 'template07':
-                    template = '<my-page-form-01 id="template07" ></my-page-form-01>'
+                   
                     break;
                     case 'template08':
-                    template  = '<my-page-search-01 id="template08" ></my-page-search-01>'
+                
                     break;
                     case 'template09':
-                        template  = '<my-page-load-spinner-01 id="template09" ></my-page-load-spinner-search-01>'
+                      
                     break;
                     case 'template10':
         
                     break;
         
                 }
+                new UXLoadPanel({
+                    id:id,
+                    textTemplate: template
+                });
             }
         })
     
@@ -103,13 +122,8 @@ export const MyMenuVerticalPanel = (props) => {
                     </ul> 
                     
                 </li>
-            </ul>
-        
-        
-        
-    )
-    
-    
+        </ul>   
+    )    
 }
 
 export default MyMenuVerticalPanel;

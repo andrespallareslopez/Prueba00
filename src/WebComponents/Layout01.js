@@ -9,7 +9,7 @@ import '../../src/components/layouts/03layout02/03transition02.css'
 import '../../src/components/effects/03rippleEffects01.css'
 
 
-export const Layout =(props)=>{
+export const Layout01 =(props)=>{
     return (
         <div id="container" className="container lyt03layout02"  >
         <div className="pages" >
@@ -21,7 +21,7 @@ export const Layout =(props)=>{
         </header>
         <div className="main-body">
             <aside id="menuvertical" className="menu-area">
-              <MyMenuVertical id="MenuVertical01" ></MyMenuVertical>
+              <MyMenuVerticalPanel id="MenuVertical01" ></MyMenuVerticalPanel>
             </aside>
             <div id="root" className="wrapper page root">
         
@@ -63,4 +63,4 @@ export const Layout =(props)=>{
     )
 }
 
-export default Layout;
+export default Layout01;

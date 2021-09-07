@@ -43,7 +43,27 @@ input:focus{
             background: $c50;
            // min-height:100vh;
         }
-         .childLayout,.childLayout1,.childLayout2{
+        .childLyt,.childLyt1,.childLyt2,.childLyt3,.childLyt4,.childLyt5{
+            display:block;
+            position:absolute;
+            width:0;
+            background: $c50;
+            top:50%;
+            left:50%;
+            //transform:translateX(100%);
+            transform :translate(-100%);
+            height:0;
+            overflow: hidden;
+            overflow-y: auto;
+            opacity:0;
+            
+            transition:all 0.2s ease-in-out;
+            @media screen and (min-width:768px){
+                margin-left: #{$asidew};
+                /*width:calc(100% - #{$asidew})*/
+            }
+        }
+         .childLayout,.childLayout1,.childLayout2,.childLayout3,.childLayout4,.childLayout5,.childLayout6{
             display:block;
             position:absolute;
             width:100%;

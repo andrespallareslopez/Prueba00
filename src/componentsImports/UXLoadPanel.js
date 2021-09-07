@@ -62,7 +62,8 @@ var controls;
        var optionsLoadPanel=options
        console.log('estoy en initeventloadpantel')
        console.log(options.id)
-       var containerView=".main-body .childLayout"
+       //var containerView=".main-body .childLayout"
+       var containerView= self.options.containerComponent
        var id=options.id
        var $template=$('#'+id+'.wrapper.page.child');
        /*

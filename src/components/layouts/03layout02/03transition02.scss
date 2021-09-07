@@ -18,7 +18,7 @@
     position:absolute;
     /*top:0;*/
     /*left:100%;*/
-    transform:translateX(100%);
+    /*transform:translateX(100%);*/
     width:100%;
     height:100%;
     overflow: hidden;
@@ -37,14 +37,26 @@
         width:50px;
     }
 }
-
-.childLayout.animation,.childLayout1.animation,.childLayout2.animation{
+.childLyt.animation,.childLyt1.animation,.childLyt2.animation,.childLyt3.animation,.childLyt4.animation,.childLyt5.animation,.childLyt6.animation{
+    
     opacity:1;
-    transform:translateX(0%);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    transform :translate(0);
     @media (min-width:768px){
   
        width:calc(100% - 200px);
-   }    
+   }   
+}
+.childLayout.animation,.childLayout1.animation,.childLayout2.animation,.childLayout3.animation,.childLayout4.animation,.childLayout5.animation,.childLayout6.animation{
+    opacity:1;
+    transform:translateX(0%);
+    @media (min-width:768px){
+    
+       width:calc(100% - 200px);
+    }    
 }
 .child.animation{
      opacity:1;
