@@ -63,21 +63,24 @@ var controls;
        console.log('estoy en initeventloadpantel')
        console.log(options.id)
        //var containerView=".main-body .childLayout"
-       var containerView= self.options.containerComponent
+       var containerView= self.options.containerView
        var id=options.id
-       var $template=$('#'+id+'.wrapper.page.child');
+       var $template=$('#'+id+self.options.containerComponent);
        /*
          puede ser que el id no este al misno nivel que .wrapper.page.child
          por tanto tenemos que tratar de buscar por id+' .wrapper.page.....
        */
        if (!$template[0]){
-        $template=$('#'+id+' .wrapper.page.child');
+        //$template=$('#'+id+' .wrapper.page.child');
+        $template=$('#'+id+' '+self.options.containerComponent);
        }
        var $buttonBack
         console.log($template.length)
-        $('.childLayout').removeClass("animation");
-        ReactDOM.unmountComponentAtNode($('.main-body .childLayout')[0]);
-       if ($template.length==0 && id){
+        //$('.childLayout').removeClass("animation");
+        $(self.options.containerView).removeClass("animation");
+        //ReactDOM.unmountComponentAtNode($('.main-body .childLayout')[0]);
+        ReactDOM.unmountComponentAtNode($(self.options.containerView)[0]);
+        if ($template.length==0 && id){
           
         var panelControl=new components.container({
            ReactDOM:ReactDOM, 
@@ -114,33 +117,40 @@ var controls;
     }
     
     var changeAnimation = function(options,remove){
+        var self = this
         console.log("estoy dentro de changeAnimation")
         //console.dir($template)
         var id=options.id
         console.log(id)
-        var $template=$('.childLayout');
-        var reftemplate='#'+id+'.wrapper.page.child'
-        
+        var $template=$(self.options.containerView);
+        //var reftemplate='#'+id+'.wrapper.page.child'
+        var reftemplate='#'+id + self.options.containerComponent
+         
         if ($(reftemplate).length==0){
-          $template=$('.childLayout');
-          reftemplate='#'+id+'.wrapper.page.child'
+          //$template=$('.childLayout');
+          $template=$(self.options.containerView);
+
+          //reftemplate='#'+id+'.wrapper.page.child'
+          reftemplate='#'+id+self.options.containerComponent
         }
         console.dir($template)
         console.log(reftemplate)
         if ($template.hasClass("animation")){
          $template.removeClass("animation")
-         $('#'+id+'.wrapper.page.child').removeClass('animation');
+         //$('#'+id+'.wrapper.page.child').removeClass('animation');
+         $('#'+id+self.options.containerComponent).removeClass('animation');
          if (remove){
              var timer=setTimeout(function(){
                  //removeContainer('#'+id+'.wrapper.page.child')
                  //removeContainer(reftemplate)
-                 ReactDOM.unmountComponentAtNode($('.main-body .childLayout')[0]);
+                 //ReactDOM.unmountComponentAtNode($('.main-body .childLayout')[0]);
+                 ReactDOM.unmountComponentAtNode($(self.options.containerView)[0]);
                  clearTimeout(timer)
              },400) 
          }
         }else{
          $template.addClass("animation")
-         $('#'+id+'.wrapper.page.child').addClass('animation');
+         $('#'+id+self.options.containerComponent).addClass('animation');
         }
     }
     

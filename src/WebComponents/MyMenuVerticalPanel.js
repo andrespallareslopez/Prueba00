@@ -46,7 +46,9 @@ export const MyMenuVerticalPanel = (props) => {
                           )
                     break;
                     case 'template02':
-                  
+                        template = (props) => (
+                            <MyPageTable id={props.id}></MyPageTable>
+                        )
                     break;
                     case 'template03':
                    
@@ -76,6 +78,7 @@ export const MyMenuVerticalPanel = (props) => {
                 }
                 new UXLoadPanel({
                     id:id,
+                    containerView: ".main-body .childLyt",
                     textTemplate: template
                 });
             }

@@ -2,6 +2,12 @@ import jQuery from '../../src/componentsImports/import-jquery.js';
 //import * as inputmask1 from 'jquerymask';
 import {util} from '../../src/componentsImports/util01.js';
 import {components} from '../../src/componentsImports/components01.js';
+
+import {UXPaginacionControl} from '../../src/componentsImports/UXPaginacionControl.js'
+import {UXPaginacion} from '../../src/componentsImports/UXPaginacion.js'
+
+import Enumerable from 'linq'
+
 import IMask from 'imask'
 
 import Inputmask from 'inputmask'
@@ -12,13 +18,12 @@ var controls;
 
 ;(function(ns,$){
     "use strict";
-    
+       
        ns.UXTable=(function(){
           return function(options){
               if (options){
                  this.init(options);
-              }
-              
+              }              
           };
        })();
        ns.enumTraking={
