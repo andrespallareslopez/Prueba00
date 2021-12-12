@@ -16,9 +16,9 @@ import {datos,mesas,categorias,articulos} from '../../src/ListInMemory.js'
 export default function Home() {
   return (
    
-     <Layout01>
+     <Layout>
          <MySlidePanel datalist={categorias} id="panelCategorias"></MySlidePanel>
-     </Layout01>
+     </Layout>
     
   )
 }
