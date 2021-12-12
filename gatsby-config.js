@@ -6,6 +6,10 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata:{
+    title: 'Formacion',
+    author: 'andres pallares lopez'
+  },
   plugins: [
             'gatsby-plugin-sass',
             {
