@@ -40,60 +40,95 @@ export const MyMenuVertical = (props) => {
           e.preventDefault()
           var id=$(e.target).data("panel-id")
           var template;
+
           switch(id){
             case 'template01':
               console.dir(props)
                template=(props)=> (
-                 <MyPage01 id={props.id}></MyPage01>
+                 <MyPage01 id={id}></MyPage01>
                )
             break;
             case 'template02':
                template=(props)=> (
-                  <MyPage02 id={props.id}></MyPage02>
+                  <MyPage02 id={id}></MyPage02>
                )
             break;
             case 'template03':
                 template=(props)=> (
-                  <MyPage03 id={props.id}></MyPage03>
+                  <MyPage03 id={id}></MyPage03>
                )
             break;
             case 'template04':
                template=(props)=>(
-                 <MyPageSearch id={props.id} ></MyPageSearch>
+                 <MyPageSearch id={id} ></MyPageSearch>
                )
             break;
             case 'template05':
                template = (props) => (
-                 <MyPageTable id={props.id}></MyPageTable>
+                 <MyPageTable id={id}></MyPageTable>
                )
             break;
             case 'template06':
                template=(props) =>(
-                 <MyPageForm id={props.id} ></MyPageForm>
+                 <MyPageForm id={id} ></MyPageForm>
                )
             break;
             case 'template07':
                template =  (props) => (
-                 <MyTab id={props.id} ></MyTab>
+                 <MyTab id={id} ></MyTab>
                )
             break;
             case 'template08':
               template =  (props) => (
-                <MyPagePaginacion id={props.id} ></MyPagePaginacion>
+                <MyPagePaginacion id={id} ></MyPagePaginacion>
               )
             break;
             case 'template09':
               template =  (props) => (
-                <MyLogin01 id={props.id} ></MyLogin01>
+                <MyLogin01 id={id} ></MyLogin01>
               )
             break;
             case 'template10':
               template =  (props) => (
-                <MyLogin02 id={props.id} ></MyLogin02>
+                <MyLogin02 id={id} ></MyLogin02>
               )
             break;
             case 'template11':
-               
+              var datos={
+                grupos:[{codgrupo:1,description:"Bebida"},
+                        {codgrupo:2,description:"Pan"},
+                        {codgrupo:3,description:"Carne"},
+                        {codgrupo:4,description:"Pescado"},
+                        {codgrupo:5,description:"Botes"},
+                        {codgrupo:6,description:"Vinos"},
+                        {codgrupo:7,description:"Refrescos"},
+                        {codgrupo:8,description:"Bolleria"},
+                        {codgrupo:9,description:"Dulces"},
+                        {codgrupo:10,description:"Frutas"},
+                        {codgrupo:11,description:"Bizcochos"},
+                        {codgrupo:12,description:"Pucheros"},
+                        {codgrupo:13,description:"Tortas"},
+                        {codgrupo:14,description:"Grano"},
+                        {codgrupo:15,description:"Pastas"},
+                        {codgrupo:16,description:"Ensaladas"},
+                        {codgrupo:17,description:"Pizzas"},
+                        {codgrupo:18,description:"Horno"},
+                        {codgrupo:19,description:"Cervezas"},
+                        {codgrupo:20,description:"Rebozados"},
+                        {codgrupo:21,description:"Frituras"},
+                        {codgrupo:22,description:"Yogures"},
+                        {codgrupo:23,description:"Helados"},
+                        {codgrupo:24,description:"Licores"},
+                        {codgrupo:25,description:"Copas"},
+                        {codgrupo:26,description:"Cafes"},
+                        {codgrupo:27,description:"Poleos"},
+                        {codgrupo:28,description:"Hamburguesas"},
+                        {codgrupo:29,description:"Chips"}]
+            };
+              template=(props)=>(
+                
+                <MyPageSearch id={id} data={datos.grupos} ></MyPageSearch>
+              )
             break;
             case 'template12':
                
@@ -131,7 +166,7 @@ export const MyMenuVertical = (props) => {
                            <a className="element-link el ripple" href="#/plantilla8" data-panel-id="template08" >SubLink 3</a>
                            <a className="element-link el ripple" href="#/plantilla9" data-panel-id="template09" >Prueba Login 01</a>
                            <a className="element-link el ripple" href="#/plantilla10" data-panel-id="template10" >Prueba Login 02</a>
-                           <a className="element-link el ripple" href="#/plantilla11" data-panel-id="template11" >Prueba Login 03</a>
+                           <a className="element-link el ripple" href="#/plantilla11" data-panel-id="template11" >Listado busqueda</a>
                          </div>
                     </li>
                     <li className="element item itm" ><a className="element-link el ripple" href="#/plantilla11">Link 3

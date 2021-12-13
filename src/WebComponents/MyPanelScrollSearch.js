@@ -1,17 +1,22 @@
 import React,{useEffect} from 'react'
 import {UXPanelScroll} from '../../src/componentsImports/UXPanelScroll.js'
 
+
 import '../../src/components/panel/04PanelScroll02.css'
 
 export const MyPanelScrollSearch = (props) => {
 
     useEffect(()=>{
-         /*
+        let id=props.id;
         const panel = new UXPanelScroll({
            id:id,
-           item:".list-grp-buttons .list-grp-content-top"
+           item:".list-collection .el-content"
         })
-        */
+
+        return ()=>{
+          panel.destroy()
+                
+       }
     },[]) 
    
     return (
