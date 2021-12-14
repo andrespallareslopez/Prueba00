@@ -17,6 +17,8 @@ import {MyPagePaginacion} from '../../src/WebComponents/MyPagePaginacion.js'
 
 import {MyPageForm} from '../../src/WebComponents/MyPageForm.js'
 
+import {MyPageForm01} from '../../src/WebComponents/MyPageForm01.js'
+
 import {MyTab} from '../../src/WebComponents/MyTab.js'
 
 import MyLogin01 from '../../src/WebComponents/MyLogin01'
@@ -24,6 +26,9 @@ import MyLogin02 from '../../src/WebComponents/MyLogin02'
 
 import '../../src/components/menu-vertical/03Menu-vertical01/03Menu-vertical01.css';
 import '../../src/components/list/03List-collections.css';
+
+import {mesas,categorias,articulos} from '../../src/ListInMemory.js'
+
 
 export const MyMenuVertical = (props) => {
     //console.dir(props);
@@ -131,7 +136,15 @@ export const MyMenuVertical = (props) => {
               )
             break;
             case 'template12':
-               
+              var controls=[
+                {id:'control01',name:'Nombre',nameControl:'input',msgText:'Nombre'},
+                {id:'control02',name:'Precio',scale:2,nameControl:'inputdecimal',msgText:'Precio'},
+                {id:'control03',name:'Fecha',nameControl:'calendar',msgText:'Fecha'},
+                {id:'control04',name:'Mesas',nameControl:'combo',msgText: 'Mesas',data:mesas,nameField:'descripcion'} 
+              ];
+              template=(props)=>(
+                <MyPageForm01 id={id} controls={controls} ></MyPageForm01>
+              )
             break;
           }
           new UXLoadPanel({
@@ -167,6 +180,7 @@ export const MyMenuVertical = (props) => {
                            <a className="element-link el ripple" href="#/plantilla9" data-panel-id="template09" >Prueba Login 01</a>
                            <a className="element-link el ripple" href="#/plantilla10" data-panel-id="template10" >Prueba Login 02</a>
                            <a className="element-link el ripple" href="#/plantilla11" data-panel-id="template11" >Listado busqueda</a>
+                           <a className="element-link el ripple" href="#/plantilla12" data-panel-id="template12" >Formulario</a>
                          </div>
                     </li>
                     <li className="element item itm" ><a className="element-link el ripple" href="#/plantilla11">Link 3

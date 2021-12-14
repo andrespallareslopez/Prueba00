@@ -159,7 +159,7 @@ export const MyComboSearch = (props) => {
         <div className="group group-block">
             <div className="label-input">
             <span className="logo fa fa-tag fa-2x"></span>
-            <input type="text" autoComplete="off" id="busquedatxt" placeholder={props.msgPlaceHolder} className="input medium" />
+            <input type="text" diabled={ (props.disabled && props.disabled===true) ? true : false} autoComplete="off" id="busquedatxt" placeholder={props.msgPlaceHolder} className="input medium" />
             <button  id="search" className="list-button"><span className="fa fa-search" ></span></button>
             </div>
         </div>

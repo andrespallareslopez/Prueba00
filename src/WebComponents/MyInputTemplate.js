@@ -16,7 +16,7 @@ export const MyInputTemplate = (props) => {
           </div>
           <div className="label-input" >
             <span className="logo fa fa-tag fa-2x" ></span>
-            <input type="text" id={'txt'+props.id} autoComplete="off" name={props.name} placeholder={props.msgPlaceHolder} className="input" />
+            <input  diabled={ (props.disabled && props.disabled===true) ? true : false} type="text" id={'txt'+props.id} autoComplete="off" name={props.name} placeholder={props.msgPlaceHolder} className="input" />
           </div>
           <div className="label-warning" style={(props.msgWarning===undefined)? {display:'none'}: {display:'block'}}>
             <span className="logo fa fa-warning fa-2x" ></span>

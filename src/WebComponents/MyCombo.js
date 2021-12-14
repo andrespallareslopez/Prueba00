@@ -104,6 +104,7 @@ export const MyCombo = (props) => {
                 <span className="logo fa fa-tag fa-2x"></span>
                 <input
                     id={props.id+"combotxt"}
+                    diabled={ (props.disabled && props.disabled===true) ? true : false}
                     type="text"
                     placeholder=""
                     className="input medium"

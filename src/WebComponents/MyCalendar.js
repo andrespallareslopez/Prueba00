@@ -32,7 +32,7 @@ export const MyCalendar = (props) => {
         </div>
         <div className="label-input">
           <span className="logo fa fa-tag fa-2x"></span>
-           <input id="fecha" autoComplete="off" data-inputmask="'alias':'date','placeholder':'_'"  className="input medium" type="text" placeholder="" />
+           <input id="fecha" autoComplete="off" diabled={ (props.disabled && props.disabled===true) ? true : false} data-inputmask="'alias':'date','placeholder':'_'"  className="input medium" type="text" placeholder="" />
           <button id="btn-fecha" className="list-button"><span className="fa fa-calendar"></span></button>
         </div>
       </div>
