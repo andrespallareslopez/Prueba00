@@ -27,7 +27,7 @@ import MyLogin02 from '../../src/WebComponents/MyLogin02'
 import '../../src/components/menu-vertical/03Menu-vertical01/03Menu-vertical01.css';
 import '../../src/components/list/03List-collections.css';
 
-import {mesas,categorias,articulos} from '../../src/ListInMemory.js'
+import {datos,mesas,categorias,articulos} from '../../src/ListInMemory.js'
 
 
 export const MyMenuVertical = (props) => {
@@ -99,7 +99,7 @@ export const MyMenuVertical = (props) => {
               )
             break;
             case 'template11':
-              var datos={
+              var lista={
                 grupos:[{codgrupo:1,description:"Bebida"},
                         {codgrupo:2,description:"Pan"},
                         {codgrupo:3,description:"Carne"},
@@ -132,7 +132,7 @@ export const MyMenuVertical = (props) => {
             };
               template=(props)=>(
                 
-                <MyPageSearch id={id} data={datos.grupos} ></MyPageSearch>
+                <MyPageSearch id={id} data={lista.grupos} ></MyPageSearch>
               )
             break;
             case 'template12':
@@ -140,7 +140,11 @@ export const MyMenuVertical = (props) => {
                 {id:'control01',name:'Nombre',nameControl:'input',msgText:'Nombre'},
                 {id:'control02',name:'Precio',scale:2,nameControl:'inputdecimal',msgText:'Precio'},
                 {id:'control03',name:'Fecha',nameControl:'calendar',msgText:'Fecha'},
-                {id:'control04',name:'Mesas',nameControl:'combo',msgText: 'Mesas',data:mesas,nameField:'descripcion'} 
+                {id:'control04',name:'Mesas',nameControl:'combo',msgText: 'Mesas',data:mesas,nameField:'descripcion'},
+                {id:'control05',name:'id',nameControl:'input',msgText:'id',disabled:true,value:50},
+                {id:'control06',name:'busqueda',nameControl:'combosearch',msgText:'busqueda',data:datos,nameField:'description'},
+                {id:'control07',name:'telefono',nameControl:'inputmask',msgText:'telefono', mask:'(000) 00 00 00'},
+                {id:'control08',name:'Tarjeta Credito',nameControl:'inputcreditcard',msgText:'Tarjeta Credito'} 
               ];
               template=(props)=>(
                 <MyPageForm01 id={id} controls={controls} ></MyPageForm01>
@@ -154,7 +158,7 @@ export const MyMenuVertical = (props) => {
       }
       });
     },[]);
-   
+    
     const divstyle={
           height:'100%'
     }

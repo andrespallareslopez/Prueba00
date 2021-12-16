@@ -71,7 +71,7 @@ export const MyComboSearch = (props) => {
                 var datoscombo=Enumerable.from(props.data)
                 .where(
                     (data)=>{
-                        return data.description.includes(value)==true
+                        return data[props.nameField].toUpperCase().includes(value.toUpperCase())==true
                      })
                  .select("$").toArray();
                  console.dir(datoscombo);

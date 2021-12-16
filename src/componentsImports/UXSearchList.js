@@ -80,6 +80,13 @@ var controls;
      }
      ns.UXSearchList.prototype.initEventInputSearch=function(){
         var self=this
+
+        const KEY_UP = 38;
+        const KEY_DOWN = 40;
+        const KEY_ENTER = 13;
+        const KEY_LEFT = 37;
+        const KEY_RIGHT = 39;
+
         console.log('estoy dentro de UXSearchList initeventinputsearch')
         
         self.eventbuttons()
@@ -99,20 +106,48 @@ var controls;
         */
         
         $($inputText).on("keydown",function(e){
-                      
+
+            if (e.keyCode===KEY_UP || e.keyCode===KEY_DOWN || e.keyCode===KEY_ENTER ){
+                
+                self.close();
+                            
+                 return true;
+            }
+                    
         })
         $($inputText).on("keyup", debounce(function (e) {
             let datoscombo
+            console.dir(e);
+            console.log(e.keyCode);
             if (scroll!=undefined){
                 scroll.destroy();  //Esto es muy importante si hubiera alguno activo por el efecto debounce, destruirlo
             }
+            
+            if (e.keyCode===KEY_UP || e.keyCode===KEY_DOWN || e.keyCode===KEY_ENTER ){
+                
+                    self.close();
+                                
+                return true;
+            }
+            if (e.keyCode===KEY_RIGHT || e.keyCode===KEY_LEFT){
+
+                return true;
+            }
+
             //console.dir( self.options.data[id])
             console.log(self.$inputText.val())
             if ($($inputText).val().length>0){
                 if (self.options.onSearch){
                     datoscombo = self.options.onSearch(datos,self.$inputText.val(),id)
                 }
-                self.open()
+                if (datoscombo.length>0){
+                    self.open()
+                    self.openit=true;
+                }else{
+                    self.close()
+                    self.openit=false;
+                }
+                
                
             }
             else{

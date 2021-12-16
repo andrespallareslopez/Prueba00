@@ -33,7 +33,7 @@ export const MyForm = (props) => {
           <MyInput id="text1" name="nombre" msgText="Nombre" msgPlaceHolder="Introduce nombre"></MyInput>
           <MyCalendar id="cal1" name="fecha" msgText="Introduce Fecha"></MyCalendar>
           <MyCombo id="combo2" name="mesa" data={mesas} msgText="Introduce mesas" nameField="descripcion" ></MyCombo>
-          <MyCombo id="combo1" name="articulos"data={articulos} msgText="Introduce familia" nameField="descripcion" ></MyCombo>
+          <MyCombo id="combo1" name="articulos" data={articulos} msgText="Introduce familia" nameField="descripcion" ></MyCombo>
           <MyComboSearch id="search01" name="categoria" data={datos} msgPlaceHolder="Introduce busqueda" nameField="description" ></MyComboSearch>
           <MyInputNum required id="num01" name="numero" msgText="Numero" msgWarning="Numero Obligatorio" msgPlaceHolder="Introduce numero"></MyInputNum>  
           <MyInputDecimal id="decimal01" msgPlaceHolder="Decimal" scale="4" />

@@ -58,9 +58,6 @@ export const MyPageSearch = (props) => {
 
         }
      
-    
-    
-    
     },[]) 
 
     return (
