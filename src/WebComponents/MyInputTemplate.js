@@ -21,7 +21,7 @@ export const MyInputTemplate = (props) => {
           <div className="label-warning" style={(props.msgWarning===undefined)? {display:'none'}: {display:'block'}}>
             <span className="logo fa fa-warning fa-2x" ></span>
             <span className="text">{props.msgWarning}</span>
-          </div>                                             
+          </div>                                                                                
         </div>
       </div>
     )

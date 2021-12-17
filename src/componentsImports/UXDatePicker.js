@@ -149,7 +149,9 @@ var UXDatePicker = controls.UXDatePicker
 export {UXDatePicker}
 
 //console.dir(controls)
+/*
 if (window.controls==undefined){
    window.controls={}
 }
 util.addNameSpace(window.controls,controls);
+*/

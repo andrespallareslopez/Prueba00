@@ -101,7 +101,9 @@ var controls;
 })(controls=controls||{},components,jQuery)
 var UXAccordeon=controls.UXAccordeon
 export {UXAccordeon}
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

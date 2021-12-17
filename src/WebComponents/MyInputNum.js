@@ -9,6 +9,10 @@ export const MyInputNum = (props) => {
     new UXValidation(props,({selectorInput})=>{
        //console.log("estoy dentro uxvalidation");
        IMask(selectorInput,{mask:/^[0-9]*$/});
+    },function(){
+      //alert('Estoy aqui')
+      
+
     });
     //Inputmask({ regex: "\\d*" }).mask(selectorInput);
   //IMask(selectorInput,{mask:/^[0-9]*$/});

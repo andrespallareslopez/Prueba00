@@ -127,7 +127,9 @@ var controls;
 var UXKeyForm=controls.UXKeyForm
 export {UXKeyForm}
 
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

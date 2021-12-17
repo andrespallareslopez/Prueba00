@@ -1,6 +1,6 @@
 
 import $ from './import-jquery.js'
-import Hammer from 'hammerjs'
+//import Hammer from 'hammerjs'
 import {util} from '../../src/componentsImports/util01.js';
 import {components} from '../../src/componentsImports/components01.js';
 
@@ -81,7 +81,7 @@ var controls;
                        var options = {
                           preventDefault: true
                        };
-                       var mt=new Hammer(this,options);
+                       //var mt=new Hammer(this,options);
                        //mt.get("pan").set({direccion:Hammer.DIRECTION_ALL});
                        //mt.get("swipe").set({direction:Hammer.DIRECTION_ALL})
                        /*
@@ -98,24 +98,24 @@ var controls;
                           avance();
                        });
                        */
-                       mt.on("swipeleft",function(event){
-                           console.log("drag left");
-                           ii=index;
+                       //mt.on("swipeleft",function(event){
+                       //    console.log("drag left");
+                       //    ii=index;
                            //atras();
-                       });
-                       mt.on("swiperight",function(event){
-                           console.log("drag right");
-                           ii=index;
+                       //});
+                       //mt.on("swiperight",function(event){
+                       //    console.log("drag right");
+                       //    ii=index;
                            //avance(); 
-                       });
+                       //});
                        /*
                        mt.on("panup",function(event){
                            console.log("pan up");
                        });
                        */
-                       mt.on("panend",function(){
-                           console.log("pan end");
-                       });
+                       //mt.on("panend",function(){
+                       //    console.log("pan end");
+                       //});
                    });
             //})
         }
@@ -130,8 +130,9 @@ var controls;
 
 var UXTab=controls.UXTab;
 export {UXTab}
-
+/*
 if (!window.controls)
    window.controls={}
       
 util.addNameSpace(window.controls,controls);
+*/

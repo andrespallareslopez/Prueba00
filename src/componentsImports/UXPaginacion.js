@@ -63,7 +63,9 @@ var controls
 var UXPaginacion=controls.UXPaginacion;
 export {UXPaginacion}
 
+/*
 if (!window.controls)
    window.controls={}
       
 util.addNameSpace(window.controls,controls);
+*/

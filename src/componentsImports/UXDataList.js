@@ -226,9 +226,10 @@ var controls;
 
 var UXDataList=controls.UXDataList
 export {UXDataList}
-
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
 
+*/

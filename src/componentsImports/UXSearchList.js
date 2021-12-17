@@ -5,7 +5,7 @@ import {util} from '../../src/componentsImports/util01.js';
 import {components} from '../../src/componentsImports/components01.js';
 import {UXDataList} from '../../src/componentsImports/UXDataList.js'
 import {UXButtonScroll} from '../../src/componentsImports/UXButtonScroll.js'
-
+import loadable from '@loadable/component'
 var controls;
 
 ;(function(ns,UXDataList,$){
@@ -203,7 +203,9 @@ var controls;
 
 var UXSearchList=controls.UXSearchList
 export {UXSearchList}
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

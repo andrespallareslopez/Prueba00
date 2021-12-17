@@ -54,10 +54,10 @@ var controls
      
 var UXPanelScroll=controls.UXPanelScroll;
 export {UXPanelScroll}
-
+/*
 if (!window.controls)
    window.controls={}
         
 util.addNameSpace(window.controls,controls);
-     
+*/     
     

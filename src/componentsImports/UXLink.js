@@ -71,7 +71,10 @@ var controls;
 })(controls=controls||{},components,jQuery)
 var UXLink=controls.UXLink
 export {UXLink}
+
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

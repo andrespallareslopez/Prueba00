@@ -88,7 +88,9 @@ var controls;
 
 var UXSearchPanel=controls.UXSearchPanel;
 export {UXSearchPanel}
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

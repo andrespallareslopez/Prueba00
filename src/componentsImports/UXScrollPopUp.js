@@ -64,8 +64,9 @@ var controls;
      
 var UXScrollPopUp=controls.UXScrollPopUp
 export {UXScrollPopUp}
+/*
 if (!window.controls)
    window.controls={}    
     
 util.addNameSpace(window.controls,controls);
-     
+*/

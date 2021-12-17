@@ -343,8 +343,10 @@ var clickElementAccordion=function(){
 
 var UXButtonScroll=controls.UXButtonScroll
 export {UXButtonScroll}
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
 
+*/

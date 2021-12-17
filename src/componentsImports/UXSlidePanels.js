@@ -2,11 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import jQuery from '../../src/componentsImports/import-jquery.js'
 import {util} from '../../src/componentsImports/util01.js';
-import {components} from '../../src/componentsImports/components01.js';
+//import {components} from '../../src/componentsImports/components01.js';
+import {Container} from '../../src/componentsImports/components01.js';
 
+//import loadable from '@loadable/component'
+//const components = loadable(()=>import('../../src/componentsImports/components01.js'))
 var controls;
 
-;(function(ns,components,$){
+;(function(ns,Container,$){
     "use strict";
      ns.UXSlidePanels=(function(){
         return function(options){
@@ -19,7 +22,7 @@ var controls;
          
         }
      })();
-     ns.UXSlidePanels.prototype=new components.container();
+     ns.UXSlidePanels.prototype=new Container();
      
      ns.UXSlidePanels.prototype.initControl=function(options){
         this.config={};
@@ -355,13 +358,13 @@ var controls;
     
        
        
-})(controls=controls||{},components,jQuery)
+})(controls=controls||{},Container,jQuery)
 
 var UXSlidePanels=controls.UXSlidePanels
 export {UXSlidePanels}
-
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
-
+*/

@@ -343,8 +343,9 @@ var controls;
 
 var UXScroll=controls.UXScroll;
 export {UXScroll}
-
+/*
 if (!window.controls)
    window.controls={}
       
 util.addNameSpace(window.controls,controls);
+*/

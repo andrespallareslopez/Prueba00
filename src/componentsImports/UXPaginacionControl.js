@@ -126,9 +126,9 @@ var controls
 
 var UXPaginacionControl=controls.UXPaginacionControl;
 export {UXPaginacionControl}
-
+/*
 if (!window.controls)
    window.controls={}
       
 util.addNameSpace(window.controls,controls);
-
+*/

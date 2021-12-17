@@ -160,8 +160,9 @@ var controls;
 var UXLoadPanel=controls.UXLoadPanel
 
 export {UXLoadPanel}
-
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

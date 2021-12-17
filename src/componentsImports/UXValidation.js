@@ -9,18 +9,18 @@ var controls;
 ;(function(ns,components,$){
     "use strict";
     ns.UXValidation=(function(){
-        return function(options,fn){
+        return function(options,fn,callback){
                        
          var params=[].slice.call(arguments);
          if (params.length>0){    
-             this.initControl.apply(this,params,fn);
+             this.initControl.apply(this,params,fn,callback);
          }
         }
     })();
     
     //ns.UXValidation.prototype=new components.container();
     
-    ns.UXValidation.prototype.initControl=function(options,fn){
+    ns.UXValidation.prototype.initControl=function(options,fn,callback){
         /*
         ;(function(options){
             console.dir(options);
@@ -30,15 +30,15 @@ var controls;
        
        
         if ( this.initevent){
-            this.initevent(options,fn)
+            this.initevent(options,fn,callback)
         } 
           
         
      }
-     ns.UXValidation.prototype.initevent = function(options,fn){
-        this.initValidation(options,fn)
+     ns.UXValidation.prototype.initevent = function(options,fn,callback){
+        this.initValidation(options,fn,callback)
      }
-     ns.UXValidation.prototype.initValidation = function(options,fn){
+     ns.UXValidation.prototype.initValidation = function(options,fn,callback){
          var self=this;
          const {
             id,
@@ -46,12 +46,13 @@ var controls;
             msgText,
             msgWarning,
             msgPlaceHolder,
-        
+            constraints,
+            required,
          } = options;
          //console.dir(options)
          let selectorInput=document.querySelector('#'+id+' .input');
     
-         let selectorWarning = document.querySelector('#'+id+' .label-warning');
+         let selectorWarning = document.querySelectorAll('#'+id+' .label-warning');
          //console.dir(selectorWarning);
         if (selectorInput){
         selectorInput.addEventListener('focus',function(e){
@@ -60,18 +61,36 @@ var controls;
         selectorInput.addEventListener('blur',function(e){
             //console.dir(e);
              if (msgWarning){
+                
                 if (selectorInput.value){
-                    selectorWarning.style.display='none';
+                    
+                    selectorWarning.forEach(function(item){
+                        item.style.display='none';
+                    });  
+                    //selectorWarning.style.display='none';
+                    if (callback){
+                        callback();
+                    }
+
                 }else{
-                 
-                    selectorWarning.style.display='block';
+                    if (required){
+                        selectorWarning.forEach(function(item){
+                            item.style.display='block';
+                        });
+                    }
+                  
+                    //selectorWarning.style.display='block';
                  
                 }
+
              }
         });            
     }
     if (selectorWarning){
-        selectorWarning.style.display='none';
+        selectorWarning.forEach(function(item){
+            item.style.display='none';
+        });
+        //selectorWarning.style.display='none';
     }
     if (fn)
       fn({selectorInput,selectorWarning})
@@ -81,8 +100,9 @@ var controls;
 
 var UXValidation = controls.UXValidation
 export {UXValidation}
-
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

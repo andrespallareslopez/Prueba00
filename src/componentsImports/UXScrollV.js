@@ -91,8 +91,9 @@ var controls;
 
 var UXScrollV=controls.UXScrollV;
 export {UXScrollV}
+/*
 if (!window.controls)
    window.controls={}
 
 util.addNameSpace(window.controls,controls);
-
+*/

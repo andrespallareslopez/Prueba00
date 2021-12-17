@@ -29,7 +29,7 @@ export const MyTab = (props)=>{
                                <MyPanelScrollContent id="panelMesas" data={mesas}></MyPanelScrollContent>
                             </li>
                             <li className="tab-item" id="tabCategorias" name-container="Categorias">
-                               <MySlidePanel datalist={categorias} id="panelCategorias"></MySlidePanel>
+                               <MySlidePanel />
                             </li>
                             <li className="tab-item" id="tabArticulos" name-container="Articulos">
                                <MyPanelScrollContent id="panelArticulos" data={articulos}></MyPanelScrollContent>

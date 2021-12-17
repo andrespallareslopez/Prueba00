@@ -117,7 +117,9 @@ var UXMenuPanel=controls.UXMenuPanel;
 
 export {UXMenuPanel}
 
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

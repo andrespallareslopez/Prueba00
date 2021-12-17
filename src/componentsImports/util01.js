@@ -4,7 +4,7 @@ import jQuery from './import-jquery.js'
 //import jquery from './import-jquery.js'
 
 var util;
-;(function(ns,$,Handlebars){
+;(function(ns,$){
     
     ns.mobilecheck = function() {
       var check = false;
@@ -150,7 +150,7 @@ var util;
              return promise;
           };
       })();
-      
+      /*
       ns.buildtemplate=(function(){
           return function(params){
               
@@ -185,6 +185,7 @@ var util;
                 
           };
       })();
+      */
         ns.is_touch_device=function() {
             return 'ontouchstart' in window || navigator.maxTouchPoints;       // works on IE10/11 and Surface
         };
@@ -613,7 +614,7 @@ var util;
         }
       }
     }  
-  })(util={},jQuery,window.Handlebars);
+  })(util={},jQuery);
     
   export {util}
   

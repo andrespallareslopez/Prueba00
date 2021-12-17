@@ -153,8 +153,9 @@ var controls;
 var UXLoadLink=controls.UXLoadLink
 
 export {UXLoadLink}
-
+/*
 if (!window.controls)
    window.controls={}
    
 util.addNameSpace(window.controls,controls);
+*/

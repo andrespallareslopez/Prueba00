@@ -2057,8 +2057,10 @@ var controls;
 var UXTable = controls.UXTable;
 export {UXTable}
 
+/*
 if (!window.controls)
    window.controls={}
       
 util.addNameSpace(window.controls,controls);
 
+*/

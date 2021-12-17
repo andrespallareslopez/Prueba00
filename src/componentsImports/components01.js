@@ -683,6 +683,10 @@ var Container
 Container = components.container
 
 export {components,Container}
+
+/*
 if (!window.components)
     window.components={};
+
 util.addNameSpace(window.components,components);
+*/
