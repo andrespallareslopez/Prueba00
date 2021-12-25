@@ -31,6 +31,7 @@ export const MyForm = (props) => {
         <form id={props.id } className="form-fix-basic-01 " >
           
           <MyInput id="text1" name="nombre" msgText="Nombre" msgPlaceHolder="Introduce nombre"></MyInput>
+          <MyInput date required id="text2" name="fecha2" msgText="Fecha 2" />
           <MyCalendar id="cal1" name="fecha" msgText="Introduce Fecha"></MyCalendar>
           <MyCombo id="combo2" name="mesa" data={mesas} msgText="Introduce mesas" nameField="descripcion" ></MyCombo>
           <MyCombo id="combo1" name="articulos" data={articulos} msgText="Introduce familia" nameField="descripcion" ></MyCombo>

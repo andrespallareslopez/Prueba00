@@ -4,6 +4,7 @@ import {UXValidation} from '../../src/componentsImports/UXValidation.js'
 
 export const MyInputTemplate = (props) => {
     useEffect(()=>{
+      console.dir(props);
         //new UXValidation(props);
         //console.log(props.msgWarning)
     },[]);
@@ -21,7 +22,17 @@ export const MyInputTemplate = (props) => {
           <div className="label-warning" style={(props.msgWarning===undefined)? {display:'none'}: {display:'block'}}>
             <span className="logo fa fa-warning fa-2x" ></span>
             <span className="text">{props.msgWarning}</span>
-          </div>                                                                                
+          </div>
+          {
+            props.warnings && props.warnings.length>0 && props.warnings.map(function(value,i){
+              return (
+                <div className="label-warning" style={(value.msgWarning===undefined)? {display:'none'}: {display:'block'}}>
+                <span className="logo fa fa-warning fa-2x" ></span>
+                <span className="text">{value.msgWarning}</span>
+              </div>
+              )
+            })
+          }                                                                                
         </div>
       </div>
     )
